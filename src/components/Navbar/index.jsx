@@ -1,4 +1,4 @@
-const Navbar = () => {
+const NavBar = () => {
     return (
         <nav>
             <div>
@@ -12,4 +12,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default NavBar;

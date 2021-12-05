@@ -1,15 +1,13 @@
 import './App.css';
-import {LoginView,ContactView} from './views'
+import Router from './router';
 import { ThemeProvider } from "@mui/material/styles";
 import theme from './theme'
-import Home from './views/Home';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        {/*<Home />*/}
-        <LoginView />
+        <Router />
       </div>
     </ThemeProvider>
   );

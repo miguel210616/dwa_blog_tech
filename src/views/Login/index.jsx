@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Button, Container, Grid, TextField } from "@mui/material";
-import Drawer from "../../components/Drawer";
 
 const Login = () => {
   const [inputs, setInputs] = useState({
@@ -19,7 +18,6 @@ const Login = () => {
   const handleSubmit = (e) => console.log(inputs);
 
   return (
-    <Drawer>
       <Container maxWidth="xl">
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6}>
@@ -67,7 +65,7 @@ const Login = () => {
           </Grid>
         </Grid>
       </Container>
-    </Drawer>
+
   );
 };
 

@@ -3,12 +3,19 @@ import { Button, Container, TextField } from "@mui/material";
 import Drawer from "../../components/Drawer";
 
 const Contact = () => {
+  // * Teniendo un solo state para todos mis inputs
+  // * paso 1: Definit los valores iniciales de mis inputs
+  // * en un objecto
   const [inputs, setInputs] = useState({
     name: "",
     email: "",
-    sexo: ""
   });
-  /*const handleInputChange = (e) => {
+
+  // * Crear una funcion que me permita actualizar los valores de
+  // * mis inputs esta debe recibir el evento de los inputs
+  const handleInputChange = (e) => {
+    // aca recibo el evento el cual contiene el name y el value
+    // el name es un atributo del input
     const { name, value } = e.target;
 
     setInputs({
@@ -16,22 +23,21 @@ const Contact = () => {
       [name]: value,
     });
   };
+
   const handleSubmit = (e) => {
+    // e -> cuando es un submit puedo usar preventDefault
     e.preventDefault();
     console.log("name", inputs.name);
     console.log("email", inputs.email);
-    console.log("email", inputs.sexo);
-  };*/
+  };
 
   return (
     <>
-      <Drawer>
-        <Container maxWidth="xl">
-          <div>
-            <h1>Hola bebecitooo </h1>
-          </div>
-        </Container>
-      </Drawer>
+      <Container maxWidth="xl">
+        <div>
+          <h1>Hola... este es mi número para que contactes :D</h1>
+        </div>
+      </Container>
     </>
   );
 };

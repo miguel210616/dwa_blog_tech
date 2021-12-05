@@ -7,12 +7,14 @@ const theme = createTheme({
   // sombres
   palette: {
     primary: {
-      light: "#31910A",
-      main: "#34495E",
-      dark: "#31910A",
+      light: "#187C42",
+      main: "#1E8449 ",
+      dark: "#187C42",
     },
     secondary: {
-      main: "#31910A",
+      light: "#187C42",
+      main: "#1E8449 ",
+      dark: "#187C42",
     },
   },
 });
