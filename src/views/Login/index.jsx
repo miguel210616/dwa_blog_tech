@@ -1,7 +1,11 @@
 import { useState } from "react";
 import { Button, Container, Grid, TextField } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+//  * imporatar nuestra funcion login desde service
+import { login } from "../../services/auth";
 
 const Login = () => {
+  const history = useNavigate();
   const [inputs, setInputs] = useState({
     email: "",
     password: "",
@@ -15,7 +19,15 @@ const Login = () => {
     }));
   };
 
-  const handleSubmit = (e) => console.log(inputs);
+  const handleSubmit = async () => {
+    const response = await login(inputs);
+    console.log(response);
+    if (response.ok === true){
+      history("/");
+    }else{
+      alert("pon bien tus credenciales manito");
+    }
+  };
 
   return (
       <Container maxWidth="xl">

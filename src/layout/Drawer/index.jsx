@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Outlet } from "react-router-dom";
 import { styled, useTheme } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import {
@@ -18,7 +19,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import { options } from "./option";
+import { options } from "./options";
 
 const drawerWidth = 240;
 
@@ -147,7 +148,9 @@ const MiniDrawer = (props) => {
         <DrawerHeader />
         {/* BODY */}
         {/* Puede ser un objeto visual */}
-        {props.children}
+        {/* Children se encargaba de renderizar a todas las vistas hijas quel pasabamos */}
+        {/* {props.children} */}
+        <Outlet />
       </Box>
     </Box>
   );
